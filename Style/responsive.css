@@ -1,0 +1,36 @@
+﻿@media (max-width:900px){
+  .hero-grid{ grid-template-columns:1fr; }
+  .cards{ grid-template-columns:1fr 1fr; }
+  .resume-grid{ grid-template-columns:1fr; }
+  .avatar{ height:220px; }
+}
+
+@media (max-width:680px){
+  .cards{ grid-template-columns:1fr; }
+
+  .nav-toggle{
+    display:inline-flex;
+    border:1px solid var(--border);
+    background:transparent;
+    border-radius:999px;
+    padding:8px 12px;
+    cursor:pointer;
+  }
+
+  .nav-menu{
+    display:none;
+    position:absolute;
+    right:4vw;
+    top:64px;
+    flex-direction:column;
+    align-items:stretch;
+    background:var(--bg);
+    border:1px solid var(--border);
+    border-radius:16px;
+    padding:10px;
+    min-width:220px;
+    box-shadow:var(--shadow);
+  }
+
+  .nav-menu.open{ display:flex; }
+}

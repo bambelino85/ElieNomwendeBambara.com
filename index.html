@@ -1,0 +1,117 @@
+﻿<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Elie Nomwende Bambara | Portfolio</title>
+  <meta name="description" content="Elie Nomwende Bambara — Cloud & Software Engineer. Projects, experience, certifications, and resume." />
+
+  <link rel="stylesheet" href="Style/main.css" />
+  <link rel="stylesheet" href="Style/components.css" />
+  <link rel="stylesheet" href="Style/responsive.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="logo" href="index.html">Elie<span class="dot">.</span></a>
+
+      <nav class="nav" aria-label="Primary">
+        <button class="nav-toggle" id="navToggle" aria-expanded="false" aria-controls="navMenu">
+          <span class="sr-only">Toggle navigation</span>☰
+        </button>
+
+        <ul class="nav-menu" id="navMenu">
+          <li><a class="nav-link" href="index.html">Home</a></li>
+          <li><a class="nav-link" href="Pages/projects.html">Projects</a></li>
+          <li><a class="nav-link" href="Pages/experience.html">Experience</a></li>
+          <li><a class="nav-link" href="Pages/resume.html">Resume</a></li>
+          <li><a class="nav-link" href="Pages/contact.html">Contact</a></li>
+          <li><button class="theme-btn" id="themeBtn" type="button" aria-label="Toggle dark mode">🌙</button></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main>
+    <section class="hero">
+      <div class="container hero-grid">
+        <div class="hero-text">
+          <p class="badge">Cloud • Software • Systems</p>
+          <h1>Hi, I’m <span class="accent">Elie Nomwende Bambara</span>.</h1>
+          <p class="lead">
+            I build reliable cloud systems and software — with a focus on AWS, automation, and practical engineering.
+          </p>
+
+          <div class="cta-row">
+            <a class="btn primary" href="Pages/resume.html">View Resume</a>
+            <a class="btn" href="Pages/projects.html">See Projects</a>
+          </div>
+
+          <div class="link-row">
+            <a class="text-link" href="https://github.com/YOUR_USERNAME" target="_blank" rel="noreferrer">GitHub ↗</a>
+            <a class="text-link" href="https://www.linkedin.com/in/YOUR_PROFILE" target="_blank" rel="noreferrer">LinkedIn ↗</a>
+            <a class="text-link" href="mailto:elie.bambara@example.com">elie.bambara@example.com</a>
+          </div>
+        </div>
+
+        <div class="hero-card">
+          <img class="avatar" src="Images/profile/headshot.jpg" alt="Portrait of Elie Nomwende Bambara" />
+          <div class="hero-card-body">
+            <h2 class="h3">Quick Highlights</h2>
+            <ul class="checklist">
+              <li>AWS-focused engineering projects</li>
+              <li>Serverless + event-driven systems</li>
+              <li>Strong CS foundation (algorithms, DB, systems)</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <h2>Featured Projects</h2>
+          <a class="text-link" href="Pages/projects.html">View all →</a>
+        </div>
+
+        <div class="grid cards" id="featuredProjects"></div>
+      </div>
+    </section>
+
+    <section class="section subtle">
+      <div class="container">
+        <div class="section-head">
+          <h2>Experience</h2>
+          <a class="text-link" href="Pages/experience.html">Full timeline →</a>
+        </div>
+
+        <ol class="timeline" id="experienceTimeline"></ol>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container callout">
+        <div>
+          <h2>Let’s connect.</h2>
+          <p class="muted">Open to internships and full-time roles. Reach out any time.</p>
+        </div>
+        <a class="btn primary" href="Pages/contact.html">Contact Me</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="container footer-inner">
+      <p>© <span id="year"></span> Elie Nomwende Bambara</p>
+      <p class="muted">Built with HTML • CSS • JavaScript</p>
+    </div>
+  </footer>
+
+  <script src="JavaScript/data.js"></script>
+  <script src="JavaScript/main.js"></script>
+  <script src="JavaScript/themeToggle.js"></script>
+</body>
+</html>
+
