@@ -30,6 +30,12 @@ html[data-theme="dark"]{
   --radius:18px;
 }
 
+.text-link i {
+  margin-right: 6px;
+  width: 18px;
+  text-align: center;
+}
+
 *{ box-sizing:border-box; }
 html,body{ height:100%; }
 body{
