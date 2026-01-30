@@ -9,6 +9,16 @@
   --radius:18px;
 }
 
+.social-links a {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.social-links i {
+  font-size: 1.1rem;
+}
+
 html[data-theme="dark"]{
   --bg:#0b1220;
   --panel:#0f1a2e;
