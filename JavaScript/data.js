@@ -34,21 +34,33 @@
 const EXPERIENCE = [
   {
     role: "Cloud Support Associate Intern",
-    org: "AWS (BigData Team)",
-    period: "Summer 2025",
+    org: "Amazon Web Services, Inc. — Dallas, TX",
+    period: "May 2025 – August 2025",
     bullets: [
-      "Troubleshot infrastructure issues across networking, IAM, compute, and storage.",
-      "Built serverless/event-driven workflows for automation and metadata extraction.",
-      "Improved reliability with runbooks, monitoring patterns, and structured debugging."
+      "Designed and implemented a Serverless Event-Driven Metadata Extraction System: S3 upload triggers, metadata extraction, and DynamoDB storage.",
+      "Applied infrastructure-as-code using Terraform and CloudFormation; integrated CI/CD workflows with GitHub to support repeatable deployments.",
+      "Troubleshot and resolved issues across IAM permissions, EC2 networking, S3 replication, and EBS mounting to deliver secure, scalable solutions.",
+      "Built and tested networking solutions using EC2, VPC, ALB, Auto Scaling, and RDS; documented architecture and operational runbooks with Agile teams.",
+      "Related work: See Projects → “Serverless Metadata Extraction System” and “OCI Landing Zone Automation” for automation/security patterns."
     ]
   },
   {
-    role: "Senior CS Student",
-    org: "Prairie View A&M University",
-    period: "2024–2026",
+    role: "Associate Manager",
+    org: "Towne Park Ltd — Houston, TX",
+    period: "August 2022 – March 2023",
     bullets: [
-      "Advanced coursework in algorithms, databases, parallel programming, and systems.",
-      "Team-based engineering projects with documentation, timelines, and demos."
+      "Managed 35+ associates in a high-demand hospitality environment while enforcing operational standards.",
+      "Led onboarding, scheduling, and retention strategies; strengthened leadership in decision-making, conflict resolution, and problem-solving."
+    ]
+  },
+  {
+    role: "Lead Residents Experience Specialist",
+    org: "Valet Living LLC — Houston, TX",
+    period: "September 2020 – July 2022",
+    bullets: [
+      "Resolved 50+ daily resident inquiries while maintaining strong communication and customer support professionalism.",
+      "Maintained process compliance and accurate documentation across multiple service channels."
     ]
   }
 ];
+
