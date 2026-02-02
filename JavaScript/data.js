@@ -1,24 +1,33 @@
 ﻿const PROJECTS = [
   {
     title: "Serverless Metadata Extraction System",
-    description: "Event-driven pipeline for ingesting files, extracting metadata, and storing results for search/reporting.",
-    tech: ["S3","Lambda","EventBridge","DynamoDB","Step Functions"],
-    image: "../Images/projects/project1.png",
-    links: { live: "", github: "https://github.com/" }
+    description: "Event-driven AWS pipeline for ingesting files, extracting metadata, and storing results for search and reporting.",
+    tech: ["AWS", "S3", "Lambda", "EventBridge", "DynamoDB"],
+    image: "../Images/projects/serverless-metadata.png",
+    links: {
+      github: "https://github.com/bambelino85",
+      live: ""
+    }
   },
   {
     title: "SBOM Generator (Senior Design)",
-    description: "Tooling to analyze dependencies and generate standardized SBOM output for compliance and security workflows.",
-    tech: ["Python","CycloneDX/SPDX","Git","CI/CD"],
-    image: "../Images/projects/project2.png",
-    links: { live: "", github: "https://github.com/" }
+    description: "Tool to analyze software dependencies and generate standardized SBOM outputs for security and compliance.",
+    tech: ["Python", "CycloneDX", "SPDX", "Git"],
+    image: "../Images/projects/sbom-generator.png",
+    links: {
+      github: "https://github.com/bambelino85",
+      live: ""
+    }
   },
   {
-    title: "TicketWave: Event Ticket Sale System",
-    description: "Role-based system with booking, cancellation, and reporting features.",
-    tech: ["C++","SQL","PHP","MySQL"],
-    image: "../Images/projects/project3.png",
-    links: { live: "", github: "https://github.com/" }
+    title: "TicketWave – Event Ticket Sale System",
+    description: "Role-based ticket booking system with admin, organizer, and customer functionality.",
+    tech: ["C++", "SQL", "PHP", "MySQL"],
+    image: "../Images/projects/ticketwave.png",
+    links: {
+      github: "https://github.com/bambelino85",
+      live: ""
+    }
   }
 ];
 
