@@ -261,3 +261,19 @@
   gap:10px;
   flex-wrap:wrap;
 }
+
+/* Hero headshot behaves like a featured project card */
+.hero-card.card{
+  max-width: 420px;
+  margin-left: auto;
+}
+
+.hero-headshot{
+  height: 320px;
+  object-fit: contain; /* show entire picture */
+  background: var(--panel);
+}
+
+.hero-overlay{
+  padding: 14px;
+}
