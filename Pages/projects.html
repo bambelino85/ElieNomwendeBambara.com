@@ -31,9 +31,13 @@
   <main class="section">
     <div class="container">
       <div class="section-head">
-        <h1>Projects</h1>
-        <p class="muted">A selection of work across cloud, software, and systems.</p>
+        <div>
+          <h1>Projects</h1>
+          <p class="muted">Hover for GitHub, click for details. Filter by category.</p>
+        </div>
       </div>
+
+      <div class="filters" id="projectFilters"></div>
 
       <div class="grid cards" id="allProjects"></div>
     </div>
@@ -46,32 +50,27 @@
     </div>
   </footer>
 
+  <!-- Modal -->
+  <div class="modal-backdrop" id="projectModalBackdrop" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+      <div class="modal-header">
+        <h2 class="modal-title" id="modalTitle">Project</h2>
+        <button class="modal-close" id="modalCloseBtn" type="button" aria-label="Close">✕</button>
+      </div>
+
+      <div class="modal-body">
+        <img class="modal-img" id="modalImg" alt="Project preview" loading="eager" decoding="async" />
+        <div class="modal-meta">
+          <p class="muted" id="modalDesc"></p>
+          <div class="tags" id="modalTags"></div>
+          <div class="modal-actions" id="modalActions"></div>
+        </div>
+      </div>
+    </div>
+  </div>
+
   <script src="../JavaScript/data.js"></script>
   <script src="../JavaScript/main.js"></script>
   <script src="../JavaScript/themeToggle.js"></script>
-
-  <script>
-    const all = document.getElementById("allProjects");
-    if (all && typeof PROJECTS !== "undefined") {
-      PROJECTS.forEach(p => {
-        const card = document.createElement("article");
-        card.className = "card";
-
-        card.innerHTML = `
-          <img class="card-img" src="${p.image}" alt="${p.title}" />
-          <div class="card-body">
-            <h3>${p.title}</h3>
-            <p class="muted">${p.description}</p>
-            <div class="tags">${(p.tech||[]).map(t => `<span class="tag">${t}</span>`).join("")}</div>
-            <div class="card-links">
-              ${p.links?.github ? `<a class="text-link" href="${p.links.github}" target="_blank" rel="noreferrer">GitHub ↗</a>` : ""}
-              ${p.links?.live ? `<a class="text-link" href="${p.links.live}" target="_blank" rel="noreferrer">Live ↗</a>` : ""}
-            </div>
-          </div>
-        `;
-        all.appendChild(card);
-      });
-    }
-  </script>
 </body>
 </html>
