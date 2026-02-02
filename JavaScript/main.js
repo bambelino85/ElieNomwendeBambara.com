@@ -117,8 +117,7 @@ function projectCard(project, options = {}) {
 
   const img = document.createElement("img");
   img.className = "card-img";
-  img.src = project.image?.startsWith("..") ? project.image.replace("..", ".") : project.image;
-  img.alt = project.title;
+  img.src = project.image;img.alt = project.title;
 
   // Lazy loading + decode optimization
   img.loading = options.eager ? "eager" : "lazy";
@@ -265,3 +264,4 @@ if (timeline && typeof EXPERIENCE !== "undefined") {
 
   render("All");
 })();
+
