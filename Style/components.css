@@ -277,3 +277,57 @@
 .hero-overlay{
   padding: 14px;
 }
+
+/* ===== Projects: make filters look like real tabs ===== */
+.filters{
+  display:flex;
+  gap:0;
+  flex-wrap:wrap;
+  margin: 12px 0 18px;
+  border-bottom: 1px solid var(--border);
+}
+
+.filter-chip{
+  border: none;
+  background: transparent;
+  color: var(--muted);
+  padding: 10px 14px;
+  border-radius: 0;
+  cursor: pointer;
+  font-weight: 750;
+  position: relative;
+  margin-bottom: -1px; /* sit on border line */
+}
+
+.filter-chip:hover{
+  color: var(--text);
+  background: rgba(37,99,235,.08);
+}
+
+.filter-chip.active{
+  color: var(--text);
+  background: transparent;
+}
+
+.filter-chip.active::after{
+  content: "";
+  position: absolute;
+  left: 10px;
+  right: 10px;
+  bottom: 0;
+  height: 3px;
+  border-radius: 999px;
+  background: var(--accent);
+}
+
+/* Optional: make tab bar scroll nicely on small screens */
+@media (max-width: 700px){
+  .filters{
+    overflow-x: auto;
+    white-space: nowrap;
+    -webkit-overflow-scrolling: touch;
+  }
+  .filter-chip{
+    flex: 0 0 auto;
+  }
+}
