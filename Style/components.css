@@ -480,3 +480,102 @@
 @media (max-width: 620px){
   .contact-grid{ grid-template-columns: 1fr; }
 }
+
+/* ===== Contact Form + Calendly + Animated Pin ===== */
+.contact-form-head{
+  display:flex;
+  justify-content:space-between;
+  align-items:flex-start;
+  gap:12px;
+  flex-wrap:wrap;
+}
+
+.contact-form{
+  margin-top:12px;
+  display:grid;
+  gap:12px;
+}
+
+.form-grid{
+  display:grid;
+  grid-template-columns: 1fr 1fr;
+  gap:12px;
+}
+
+.form-field{
+  display:grid;
+  gap:6px;
+}
+
+.contact-form input,
+.contact-form textarea{
+  width:100%;
+  border:1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  border-radius: 14px;
+  padding: 10px 12px;
+  outline: none;
+}
+
+.contact-form input:focus,
+.contact-form textarea:focus{
+  border-color: rgba(37,99,235,.55);
+  box-shadow: 0 0 0 3px rgba(37,99,235,.14);
+}
+
+.form-actions{
+  display:flex;
+  gap:12px;
+  align-items:center;
+  flex-wrap:wrap;
+}
+
+/* Animated map pin */
+.location-row{
+  margin-top:14px;
+  display:flex;
+  align-items:center;
+  gap:12px;
+  padding: 12px 14px;
+  border: 1px solid var(--border);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.pin{
+  width:18px;
+  height:18px;
+  position:relative;
+}
+
+.pin-dot{
+  position:absolute;
+  inset:0;
+  border-radius:999px;
+  background: var(--accent);
+  box-shadow: 0 0 0 4px rgba(37,99,235,.18);
+}
+
+.pin-pulse{
+  position:absolute;
+  left:50%;
+  top:50%;
+  width: 18px;
+  height: 18px;
+  transform: translate(-50%, -50%);
+  border-radius:999px;
+  border: 2px solid rgba(37,99,235,.55);
+  animation: pinPulse 1.6s ease-out infinite;
+  opacity: .7;
+}
+
+@keyframes pinPulse{
+  0% { transform: translate(-50%, -50%) scale(1); opacity: .55; }
+  100% { transform: translate(-50%, -50%) scale(2.2); opacity: 0; }
+}
+
+/* Responsive */
+@media (max-width: 720px){
+  .form-grid{ grid-template-columns: 1fr; }
+}

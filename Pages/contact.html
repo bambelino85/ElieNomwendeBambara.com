@@ -182,6 +182,77 @@
         </article>
       </div>
 
+<section class="panel" style="margin-top:16px;">
+  <div class="contact-form-head">
+    <div>
+      <h2 class="h3" style="margin:0 0 6px;">Send a message</h2>
+      <p class="muted" style="margin:0;">
+        Prefer a quick form? This goes directly to my inbox (no backend needed).
+      </p>
+    </div>
+
+    <a class="btn primary" href="https://calendly.com/YOUR-CALENDLY-USERNAME/15min" target="_blank" rel="noreferrer">
+      <i class="fa-regular fa-calendar"></i> Schedule a Call
+    </a>
+  </div>
+
+  <!-- Formspree Contact Form -->
+  <!-- Step 1: create a Formspree form and replace YOUR_FORM_ID below -->
+  <form class="contact-form" action="https://formspree.io/f/YOUR_FORM_ID" method="POST">
+    <div class="form-grid">
+      <label class="form-field">
+        <span class="muted">Your name</span>
+        <input name="name" type="text" placeholder="Jane Doe" required>
+      </label>
+
+      <label class="form-field">
+        <span class="muted">Your email</span>
+        <input name="email" type="email" placeholder="jane@email.com" required>
+      </label>
+    </div>
+
+    <label class="form-field">
+      <span class="muted">Subject</span>
+      <input name="subject" type="text" placeholder="Opportunity / Collaboration / Question" required>
+    </label>
+
+    <label class="form-field">
+      <span class="muted">Message</span>
+      <textarea name="message" rows="5" placeholder="Write your message here..." required></textarea>
+    </label>
+
+    <!-- Helps prevent spam; leave hidden -->
+    <input type="text" name="_gotcha" style="display:none">
+
+    <div class="form-actions">
+      <button class="btn primary" type="submit">
+        <i class="fa-solid fa-paper-plane"></i> Send Message
+      </button>
+      <p class="muted" style="margin:0;">
+        Typical response time: <strong>24–48 hours</strong>.
+      </p>
+    </div>
+  </form>
+
+  <!-- Animated location line -->
+  <div class="location-row">
+    <div class="pin">
+      <span class="pin-dot" aria-hidden="true"></span>
+      <span class="pin-pulse" aria-hidden="true"></span>
+    </div>
+    <div>
+      <strong>Based in Texas</strong>
+      <div class="muted">Houston / Dallas</div>
+    </div>
+  </div>
+
+  <p class="muted" style="margin-top:12px;">
+    <strong>Note:</strong> Replace <code>YOUR_FORM_ID</code> after creating your Formspree form,
+    and replace the Calendly URL with your real scheduling link.
+  </p>
+</section>
+
+
       <section class="panel" style="margin-top:16px;">
         <h2 class="h3">Quick message templates</h2>
         <p class="muted">One-click email starters (you can edit before sending).</p>
