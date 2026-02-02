@@ -102,11 +102,7 @@ function closeProjectModal() {
 
 // Identify category for filters (AWS / C++ / Python)
 function projectCategory(project) {
-  const tech = (project.tech || []).map(t => t.toLowerCase());
-  if (tech.some(t => t.includes("aws") || t.includes("lambda") || t.includes("dynamodb") || t.includes("s3") || t.includes("eventbridge"))) return "AWS";
-  if (tech.some(t => t.includes("c++"))) return "C++";
-  if (tech.some(t => t.includes("python"))) return "Python";
-  return "Other";
+  return project.category || "Other";
 }
 
 // Project card renderer (with overlay buttons)
@@ -247,7 +243,7 @@ if (timeline && typeof EXPERIENCE !== "undefined") {
   // Build filters (fixed set + Other if needed)
   if (filterWrap) {
     const cats = new Set(PROJECTS.map(projectCategory));
-    const order = ["All", "AWS", "C++", "Python", ...(cats.has("Other") ? ["Other"] : [])];
+    const order = ["All", "Database Management", "Data Structures", "Operating Systems", "Cloud / AWS", "Cloud / Security", ...(cats.has("Other") ? ["Other"] : [])];
 
     order.forEach(cat => {
       const btn = document.createElement("button");

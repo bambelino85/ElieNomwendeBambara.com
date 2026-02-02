@@ -1,33 +1,43 @@
 ﻿const PROJECTS = [
   {
-    title: "Serverless Metadata Extraction System",
-    description: "Event-driven AWS pipeline for ingesting files, extracting metadata, and storing results for search and reporting.",
-    tech: ["AWS", "S3", "Lambda", "EventBridge", "DynamoDB"],
-    image: "../Images/projects/serverless-metadata.png",
-    links: {
-      github: "https://github.com/bambelino85",
-      live: ""
-    }
-  },
-  {
-    title: "SBOM Generator (Senior Design)",
-    description: "Tool to analyze software dependencies and generate standardized SBOM outputs for security and compliance.",
-    tech: ["Python", "CycloneDX", "SPDX", "Git"],
-    image: "../Images/projects/sbom-generator.png",
-    links: {
-      github: "https://github.com/bambelino85",
-      live: ""
-    }
-  },
-  {
-    title: "TicketWave – Event Ticket Sale System",
+    title: "TicketWave – Event Ticket Management System",
+    category: "Database Management",
     description: "Role-based ticket booking system with admin, organizer, and customer functionality.",
     tech: ["C++", "SQL", "PHP", "MySQL"],
     image: "../Images/projects/ticketwave.png",
-    links: {
-      github: "https://github.com/bambelino85",
-      live: ""
-    }
+    links: { github: "https://github.com/bambelino85", live: "" }
+  },
+  {
+    title: "University Management System",
+    category: "Data Structures",
+    description: "Console-based system designed with efficient data storage and operations (vector-based records, search, update, and reporting).",
+    tech: ["C++", "Data Structures", "STL"],
+    image: "../Images/projects/university-management.png",
+    links: { github: "https://github.com/bambelino85", live: "" }
+  },
+  {
+    title: "Process Scheduling Simulator",
+    category: "Operating Systems",
+    description: "Implemented Round Robin, MLFQ, and EDF algorithms in C++ with multithreading to analyze scheduling behavior and CPU utilization.",
+    tech: ["C++", "Multithreading", "OS Scheduling"],
+    image: "../Images/projects/process-scheduling.png",
+    links: { github: "https://github.com/bambelino85", live: "" }
+  },
+  {
+    title: "Serverless Metadata Extraction System",
+    category: "Cloud / AWS",
+    description: "Event-driven AWS pipeline for ingesting files, extracting metadata, and storing results for search and reporting.",
+    tech: ["AWS", "S3", "Lambda", "EventBridge", "DynamoDB"],
+    image: "../Images/projects/serverless-metadata.png",
+    links: { github: "https://github.com/bambelino85", live: "" }
+  },
+  {
+    title: "SBOM Generator (Senior Design)",
+    category: "Cloud / Security",
+    description: "Tool to analyze software dependencies and generate standardized SBOM outputs for security and compliance.",
+    tech: ["Python", "CycloneDX", "SPDX", "Git"],
+    image: "../Images/projects/sbom-generator.png",
+    links: { github: "https://github.com/bambelino85", live: "" }
   }
 ];
 
