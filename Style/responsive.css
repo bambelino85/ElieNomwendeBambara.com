@@ -33,4 +33,15 @@
   }
 
   .nav-menu.open{ display:flex; }
+
+  .nav-menu.open .nav-link{
+    color:var(--text);
+  }
+  .nav-menu.open .nav-link:hover{
+    background:rgba(75,46,131,.10);
+  }
+  .nav-menu.open .theme-btn{
+    color:var(--text);
+    border-color:var(--border);
+  }
 }
