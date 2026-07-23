@@ -181,10 +181,10 @@ function projectCard(project, options = {}) {
   return card;
 }
 
-// Render featured projects on homepage
-const featured = document.getElementById("featuredProjects");
-if (featured && typeof PROJECTS !== "undefined") {
-  PROJECTS.slice(0, 3).forEach((p, idx) => featured.appendChild(projectCard(p, { eager: idx === 0 })));
+// Render all projects on homepage
+const homeProjects = document.getElementById("homeProjects");
+if (homeProjects && typeof PROJECTS !== "undefined") {
+  PROJECTS.forEach((p, idx) => homeProjects.appendChild(projectCard(p, { eager: idx === 0 })));
 }
 
 // Render experience preview on homepage
