@@ -41,6 +41,49 @@
   }
 ];
 
+const POSTS = [
+  {
+    id: "post-1",
+    date: "March 2026",
+    category: "Achievement",
+    title: "Wrapped up my AWS Cloud Support internship",
+    caption: "Replace this with your own recap — what you built, what you learned, and who helped along the way.",
+    image: "../Images/updates/placeholder-1.svg",
+    tags: ["AWS", "Internship"],
+    linkedinUrl: ""
+  },
+  {
+    id: "post-2",
+    date: "January 2026",
+    category: "Event",
+    title: "Presented at a Senior Design showcase",
+    caption: "Swap in a photo from the event and a short caption about what you presented.",
+    image: "../Images/updates/placeholder-2.svg",
+    tags: ["Senior Design", "SBOM"],
+    linkedinUrl: ""
+  },
+  {
+    id: "post-3",
+    date: "November 2025",
+    category: "Certification",
+    title: "Started studying for AWS Solutions Architect",
+    caption: "A quick update post — study milestones, resources used, or a certification badge photo work great here.",
+    image: "../Images/updates/placeholder-3.svg",
+    tags: ["AWS", "Certification"],
+    linkedinUrl: ""
+  },
+  {
+    id: "post-4",
+    date: "September 2025",
+    category: "Milestone",
+    title: "Started the Fall semester at PVAMU",
+    caption: "Use this space for career milestones, conference photos, hackathons, or volunteer work.",
+    image: "../Images/updates/placeholder-4.svg",
+    tags: ["PVAMU"],
+    linkedinUrl: ""
+  }
+];
+
 const EXPERIENCE = [
   {
     role: "Cloud Support Associate Intern",

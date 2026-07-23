@@ -261,3 +261,92 @@ if (timeline && typeof EXPERIENCE !== "undefined") {
   render("All");
 })();
 
+// --- Updates & Accomplishments feed (LinkedIn-style posts) ---
+function postCard(post) {
+  const article = document.createElement("article");
+  article.className = "post-card";
+
+  const header = document.createElement("div");
+  header.className = "post-card-header";
+  header.innerHTML = `
+    <img class="post-avatar" src="../Images/profile/headshot.jpg" alt="Elie Nomwende Bambara">
+    <div>
+      <div class="post-author">Elie Nomwende Bambara</div>
+      <div class="post-meta">${post.category ? post.category + " • " : ""}${post.date || ""}</div>
+    </div>
+  `;
+  article.appendChild(header);
+
+  if (post.image) {
+    const img = document.createElement("img");
+    img.className = "post-image";
+    img.src = post.image;
+    img.alt = post.title || "Post image";
+    img.loading = "lazy";
+    img.decoding = "async";
+    article.appendChild(img);
+  }
+
+  const body = document.createElement("div");
+  body.className = "post-body";
+
+  if (post.title) {
+    const h3 = document.createElement("h3");
+    h3.className = "h3";
+    h3.textContent = post.title;
+    body.appendChild(h3);
+  }
+
+  if (post.caption) {
+    const p = document.createElement("p");
+    p.className = "post-caption";
+    p.textContent = post.caption;
+    body.appendChild(p);
+  }
+
+  if ((post.tags || []).length) {
+    const tagsWrap = document.createElement("div");
+    tagsWrap.className = "tags";
+    post.tags.forEach(t => tagsWrap.appendChild(createTag(t)));
+    body.appendChild(tagsWrap);
+  }
+
+  article.appendChild(body);
+
+  if (post.linkedinUrl) {
+    const actions = document.createElement("div");
+    actions.className = "post-actions";
+    const a = document.createElement("a");
+    a.className = "text-link";
+    a.href = post.linkedinUrl;
+    a.target = "_blank";
+    a.rel = "noreferrer";
+    a.innerHTML = `<i class="fa-brands fa-linkedin"></i> View on LinkedIn`;
+    actions.appendChild(a);
+    article.appendChild(actions);
+  }
+
+  return article;
+}
+
+const postsFeed = document.getElementById("postsFeed");
+if (postsFeed && typeof POSTS !== "undefined") {
+  POSTS.forEach(p => postsFeed.appendChild(postCard(p)));
+}
+
+// Homepage Quick Highlights -> open project modal
+document.querySelectorAll(".highlight-link").forEach(btn => {
+  btn.addEventListener("click", (e) => {
+    e.preventDefault();
+    e.stopPropagation();
+
+    const title = btn.dataset.project;
+    const project = (typeof PROJECTS !== "undefined")
+      ? PROJECTS.find(p => p.title === title)
+      : null;
+
+    if (project) openProjectModal(project);
+  });
+});
+
+
