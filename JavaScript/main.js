@@ -269,7 +269,6 @@ function postCard(post) {
   const header = document.createElement("div");
   header.className = "post-card-header";
   header.innerHTML = `
-    <img class="post-avatar" src="../Images/profile/headshot1.jpg" alt="Elie Nomwende Bambara">
     <div>
       <div class="post-author">Elie Nomwende Bambara</div>
       <div class="post-meta">${post.category ? post.category + " • " : ""}${post.date || ""}</div>
